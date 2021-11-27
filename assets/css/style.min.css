@@ -1898,11 +1898,12 @@ a, a:active, a:focus {
 .authentication {
   display: flex;
   height: calc(100vh - 50px);
+  flex-wrap: wrap;
   align-items: center;
 }
 @media screen and (max-width: 575px) {
   .authentication {
-    flex-direction: column;
+    height: 100%;
   }
 }
 
