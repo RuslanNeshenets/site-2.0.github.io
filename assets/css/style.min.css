@@ -463,6 +463,11 @@ a, a:active, a:focus {
   margin-left: -15px;
 }
 @media screen and (max-width: 575px) {
+  .header__list-item::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
   .header__list-item {
     margin-right: 10px;
     padding: 0 5px;
@@ -1116,6 +1121,9 @@ a, a:active, a:focus {
 .gameList__tag:last-child {
   margin-right: 0;
 }
+.gameList__tag:nth-child(4) {
+  display: none;
+}
 @media screen and (max-width: 991px) {
   .gameList__tag {
     padding: 3px 7px;
@@ -1427,9 +1435,20 @@ a, a:active, a:focus {
   right: 1.35rem;
   transform: translateY(-50%);
 }
-.mini__filters.rotate:after {
-  margin-top: -5px;
-  transform: rotate(180deg);
+.mini__filters.arrow:after {
+  display: none;
+}
+
+.filters__btn {
+  width: 75%;
+  text-align: center;
+  background-color: green;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .game__header {
@@ -1456,6 +1475,11 @@ a, a:active, a:focus {
 .game__left {
   width: calc(100% - 384px);
   height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .game__left {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 575px) {
   .game__left {
@@ -1540,11 +1564,17 @@ a, a:active, a:focus {
   margin-left: 64px;
   text-align: center;
 }
+@media screen and (max-width: 800px) {
+  .game__right {
+    width: 30%;
+    margin-left: 0;
+    right: 50px;
+  }
+}
 @media screen and (max-width: 575px) {
   .game__right {
     width: 100%;
     position: static;
-    margin-left: 0;
     margin-bottom: 20px;
   }
 }
@@ -1693,6 +1723,7 @@ a, a:active, a:focus {
   display: flex;
   margin-top: 10px;
   justify-content: center;
+  overflow-x: auto;
 }
 .game-gallery__small img {
   width: 100px;
@@ -1869,13 +1900,29 @@ a, a:active, a:focus {
   height: calc(100vh - 50px);
   align-items: center;
 }
+@media screen and (max-width: 575px) {
+  .authentication {
+    flex-direction: column;
+  }
+}
 
 .authentication__left {
   width: 50%;
 }
+@media screen and (max-width: 575px) {
+  .authentication__left {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 .authentication__content {
   width: 75%;
+}
+@media screen and (max-width: 575px) {
+  .authentication__content {
+    width: 100%;
+  }
 }
 
 .authentication__left__title {
@@ -1929,6 +1976,11 @@ a, a:active, a:focus {
   align-items: center;
   width: 50%;
   text-align: center;
+}
+@media screen and (max-width: 575px) {
+  .authentication__right {
+    width: 100%;
+  }
 }
 
 .authentication__right__title {
@@ -2216,6 +2268,7 @@ a, a:active, a:focus {
 @media screen and (max-width: 575px) {
   .footer__list-item {
     margin-right: 10px;
+    padding: 0 5px;
   }
 }
 
@@ -2229,4 +2282,9 @@ a, a:active, a:focus {
   color: #e0dede;
   transition-duration: 150ms;
   transition-property: color;
+}
+@media screen and (max-width: 575px) {
+  .footer__list-link {
+    font-size: 12px;
+  }
 }
