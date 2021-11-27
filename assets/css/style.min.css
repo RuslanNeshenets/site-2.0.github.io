@@ -2073,6 +2073,11 @@ a, a:active, a:focus {
   transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
   opacity: 0;
 }
+@media screen and (max-width: 575px) {
+  .modal__content {
+    padding: 20px;
+  }
+}
 
 .modal__content__star {
   display: flex;
@@ -2109,11 +2114,21 @@ a, a:active, a:focus {
   display: flex;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 575px) {
+  .modal__content__stars {
+    flex-wrap: wrap;
+  }
+}
 
 .modal__content-star {
   display: inline-block;
   padding: 5px;
   cursor: pointer;
+}
+@media screen and (max-width: 575px) {
+  .modal__content-star {
+    width: 20%;
+  }
 }
 
 .modal__content-icon {
